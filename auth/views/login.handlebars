@@ -1,0 +1,10 @@
+<h1>Login</h1>
+<form action="/auth/login" method="POST">
+  {{#if error}}
+    <p style="color: red;">{{error}}</p>
+  {{/if}}
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="password" name="password" placeholder="Senha" required>
+  <button type="submit">Login</button>
+</form>
+<a href="/register">Ainda não tem uma conta? Registrar</a>

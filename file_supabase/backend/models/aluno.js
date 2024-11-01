@@ -10,7 +10,11 @@ const Aluno = db.define('Aluno', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  url: {
+  image_url: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  pdf_url: {
     type: DataTypes.STRING,
     allowNull: false,
   },

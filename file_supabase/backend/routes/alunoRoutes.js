@@ -6,6 +6,6 @@ const upload = require('../db/upload')
 
 
 
-router.post('/create', upload.single('file'), AlunosController.createAluno);
+router.post('/create', upload, AlunosController.createAluno);
 
 module.exports = router;

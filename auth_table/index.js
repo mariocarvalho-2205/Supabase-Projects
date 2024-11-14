@@ -8,9 +8,6 @@ url - https://xvelppmojqxwzfioljym.supabase.co
 
 */
 
-/**
- * // Criar conexao com supabase do auth atraves da criação do user
- */
 
 const express = require('express')
 const app = express()
@@ -26,6 +23,13 @@ const router = require('./routes/Routes')
 
 app.use(router)
 
-app.listen(port, () => {
-    console.info(`Auth connect in port ${port}`)
-})
+conn
+.sync()
+//.sync({force: true})
+.then(
+    app.listen(port, () => {
+        console.info(`Auth connect in port ${port}`)
+    })
+
+)
+.catch(err => console.error(err))

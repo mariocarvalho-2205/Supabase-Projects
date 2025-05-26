@@ -45,7 +45,7 @@ module.exports = class AlunosController {
       const { originalname: pdfName, buffer: pdfBuffer } = req.files.pdfFile[0];
       const normalizedPdfName = normalizeFileName(pdfName);
       const { data: pdfData, error: pdfError } = await supabase.storage
-        .from("pdf_files")
+        .from("uploads")
         .upload(`pdf_files/${Date.now()}-${normalizedPdfName}`, pdfBuffer, {
           cacheControl: "3600",
           upsert: false,

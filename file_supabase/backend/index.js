@@ -5,7 +5,7 @@ const app = express()
 const port = 3001
 const cors = require('cors')
 const alunoRoutes = require('./routes/alunoRoutes')
-
+// password Msct.142205! - mario.carvalho.devpython@gmail.com supabase
 app.use(express.urlencoded({
     extended: true
 }))
